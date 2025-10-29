@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+    padding-top: 50px;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.input-area {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex-grow: 1; /* Allows the input to take up available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Rounded left corners */
+    font-size: 16px;
+}
+
+#addTaskBtn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Rounded right corners */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#addTaskBtn:hover {
+    background-color: #0056b3;
+}
+
+#taskList {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+}
+
+#taskList li {
+    background-color: #e9ecef;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+/* Add this new class to your style.css */
+.completed {
+    text-decoration: line-through; /* Draws a line through the text */
+    color: #6c757d; /* Changes text color to grey */
+    background-color: #f1f1f1; /* Slightly lighter background */
+    opacity: 0.7; /* Makes it look slightly faded */
+}
+/* Add this new CSS block to your style.css */
+.error-text {
+    color: #dc3545; /* Red color for error */
+    font-size: 0.9em;
+    margin-top: -10px; /* Pull it closer to the input area */
+    margin-bottom: 10px;
+    height: 1.2em; /* Gives it a fixed height so the layout doesn't jump */
+    visibility: hidden; /* Start hidden */
+}
+
+/* Class to make the message visible */
+.error-text.visible {
+    visibility: visible; 
+}
